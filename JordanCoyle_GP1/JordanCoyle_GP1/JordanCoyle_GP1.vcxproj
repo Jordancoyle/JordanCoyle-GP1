@@ -73,7 +73,7 @@
     <Library Include="OpenAL32.lib" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="asteroidsGame.cpp" />
+    <ClCompile Include="knightSlash.cpp" />
     <ClCompile Include="cAsteroid.cpp" />
     <ClCompile Include="cBkGround.cpp" />
     <ClCompile Include="cBullet.cpp" />
@@ -89,7 +89,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="asteroidsGame.h" />
+    <ClInclude Include="knightSlash.h" />
     <ClInclude Include="cAsteroid.h" />
     <ClInclude Include="cBkGround.h" />
     <ClInclude Include="cBullet.h" />
