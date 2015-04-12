@@ -13,6 +13,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 		windowBPP = 16;
 
 	cTexture backGround;
+
 	cBkGround backGroundSprite;
 
 	windowOGL oglWindow;
@@ -35,16 +36,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 		return 1;
 	}
 
-	backGround.createTexture("Images\\intro_screen.png");
+	backGround.createTexture("JordanCoyle_GP1\\Images\\intro_screen.png");
 	backGroundSprite.setSpritePos(glm::vec2(0.0f, 0.0f));
 	backGroundSprite.setTexture(backGround.getTexture());
 	backGroundSprite.setTextureDimensions(backGround.getTWidth(), backGround.getTHeight());
 
 	while (windowMng->isWNDRunning())
 	{
-		windowMng->processWNDEvents;
+		windowMng->processWNDEvents();
 
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		backGroundSprite.render();
 	}
