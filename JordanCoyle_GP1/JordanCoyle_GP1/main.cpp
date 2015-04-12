@@ -19,6 +19,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 	windowOGL oglWindow;
 
 	static cWNDManager* windowMng = cWNDManager::getInstance();
+	static cSoundMgr* soundMng = cSoundMgr::getInstance();
 
 	windowMng->attachOGLWnd(&oglWindow);
 
@@ -36,18 +37,22 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 		return 1;
 	}
 
-	backGround.createTexture("JordanCoyle_GP1\\Images\\intro_screen.png");
+	backGround.createTexture("Images\\intro_screen.png");
 	backGroundSprite.setSpritePos(glm::vec2(0.0f, 0.0f));
 	backGroundSprite.setTexture(backGround.getTexture());
 	backGroundSprite.setTextureDimensions(backGround.getTWidth(), backGround.getTHeight());
+
+	backGroundSprite.attachSoundMgr(soundMng);
 
 	while (windowMng->isWNDRunning())
 	{
 		windowMng->processWNDEvents();
 
-		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		backGroundSprite.render();
+
+		windowMng->swapBuffers();
 	}
 
 	return 0;
