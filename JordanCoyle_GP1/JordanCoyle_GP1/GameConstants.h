@@ -41,4 +41,6 @@ using namespace std;
 
 // This header file contains all the constants & enumarated types for the game
 
+enum gameState{MENU,PLAYING,END};
+
 #endif

@@ -8,15 +8,15 @@
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, int cmdShow)
 {
-	const int screenWidth = 1600,
+	const int screenWidth = 1280,
 		screenHeight = 720,
 		windowBPP = 16;
 
 	cTexture introTex,
 		backGroundTex;
 
-	cBkGround introSprite,
-		backGroundSprite;
+	cBkGround backGroundSprite,
+		introSprite;
 
 	windowOGL oglWindow;
 
@@ -58,27 +58,47 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 	backGroundSprite.setTextureDimensions(backGroundTex.getTWidth(), backGroundTex.getTHeight());
 
 	introSprite.attachSoundMgr(soundMng);
+	int game_State = MENU;
 
+	soundMng->getSnd("MenuMusic")->playAudio(AL_LOOPING);
+	
 	while (windowMng->isWNDRunning())
 	{
 		windowMng->processWNDEvents();
 
+		float timeSince = windowMng->getElapsedSeconds();
+
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		introSprite.render();
+		//introSprite.render();
 
-		if (inputMng->anyKeyPressed() == true)
+		switch (game_State)
 		{
-			//windowMng->processWNDEvents();
-
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	
-			//introSprite.setActive(false);
-			backGroundSprite.render();
-
-			windowMng->swapBuffers();
-			//inputMng->clearBuffers(inputMng->KEYS_DOWN_BUFFER | inputMng->KEYS_PRESSED_BUFFER);
+		case MENU:
+		{
+			introSprite.render();
+			if (inputMng->wasKeyPressed(VK_RETURN))
+			{
+				game_State = PLAYING;
+				soundMng->getSnd("MenuMusic")->stopAudio();
+			}
+			break;
 		}
+		case PLAYING:
+		{
+			backGroundSprite.render();
+			// main game code in here
+			// When game finished change game_State to END.
+			break;
+		}
+		case END:
+		{
+			// end sprite render
+			// if replaying change game_State to PLAYING
+			break;
+		}
+		}
+
 
 		windowMng->swapBuffers();
 		inputMng->clearBuffers(inputMng->KEYS_DOWN_BUFFER | inputMng->KEYS_PRESSED_BUFFER);

@@ -1,9 +1,12 @@
-﻿Build started 13/04/2015 03:20:09.
-     1>Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 14/04/2015 21:34:17.
+     1>Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt knightSlash.cpp cAsteroid.cpp cBkGround.cpp cBullet.cpp cFont.cpp cFontMgr.cpp cInputMgr.cpp cRocket.cpp cSound.cpp cSoundMgr.cpp cSprite.cpp cTexture.cpp cWNDManager.cpp main.cpp windowOGL.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cAsteroid.cpp cBkGround.cpp cBullet.cpp cFont.cpp cFontMgr.cpp cInputMgr.cpp cRocket.cpp cSound.cpp cSoundMgr.cpp cSprite.cpp cTexture.cpp cWNDManager.cpp knightSlash.cpp main.cpp windowOGL.cpp
          windowOGL.cpp
          main.cpp
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(63): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(63): warning C4309: 'argument' : truncation of constant value
+         knightSlash.cpp
          cWNDManager.cpp
          cTexture.cpp
          cSprite.cpp
@@ -52,7 +55,6 @@
      1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\casteroid.cpp(96): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
      1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\casteroid.cpp(97): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
      1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\casteroid.cpp(98): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
-         knightSlash.cpp
          Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.lib" /MACHINE:X86 Debug\knightSlash.obj
@@ -78,8 +80,8 @@
          ILUT.lib
          OpenAL32.lib
          JordanCoyle_GP1.vcxproj -> C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.exe
-     1>Done Building Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:15.43
+Time Elapsed 00:00:16.80
