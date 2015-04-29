@@ -5,6 +5,7 @@
 #include "cRocket.h"
 #include "cBullet.h"
 #include "cBkGround.h"
+#include "cSword.h"
 
 extern vector<cTexture*> theGameTextures;
 extern vector<cAsteroid*> theAsteroids;

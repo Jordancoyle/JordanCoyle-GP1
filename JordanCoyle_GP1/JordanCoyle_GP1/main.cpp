@@ -13,10 +13,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 		windowBPP = 16;
 
 	cTexture introTex,
-		backGroundTex;
+		backGroundTex,
+		charTex,
+		swordTex;
 
 	cBkGround backGroundSprite,
-		introSprite;
+		introSprite,
+		charSprite;
+
+	cSword swordSprite;
 
 	windowOGL oglWindow;
 
@@ -57,6 +62,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 	backGroundSprite.setTexture(backGroundTex.getTexture());
 	backGroundSprite.setTextureDimensions(backGroundTex.getTWidth(), backGroundTex.getTHeight());
 
+	charTex.createTexture("Images\\knight.png");
+	charSprite.setSpritePos(glm::vec2(50.0f, 180.0f));
+	charSprite.setTexture(charTex.getTexture());
+	charSprite.setTextureDimensions(charTex.getTWidth(), charTex.getTHeight());
+
+	swordTex.createTexture("Images\\Sword_Sprite.png");
+	swordSprite.attachInputMgr(inputMng);
+	swordSprite.setSpritePos(glm::vec2(220.0f, 220.0f));
+	swordSprite.setTexture(swordTex.getTexture());
+	swordSprite.setTextureDimensions(swordTex.getTWidth(), swordTex.getTHeight());
+
 	introSprite.attachSoundMgr(soundMng);
 	int game_State = MENU;
 
@@ -87,6 +103,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 		case PLAYING:
 		{
 			backGroundSprite.render();
+			charSprite.render();
+			swordSprite.render();
 			// main game code in here
 			// When game finished change game_State to END.
 			break;

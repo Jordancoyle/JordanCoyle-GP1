@@ -73,6 +73,7 @@
     <Library Include="OpenAL32.lib" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cSword.cpp" />
     <ClCompile Include="knightSlash.cpp" />
     <ClCompile Include="cAsteroid.cpp" />
     <ClCompile Include="cBkGround.cpp" />
@@ -90,6 +91,7 @@
     <ClCompile Include="windowOGL.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cSword.h" />
     <ClInclude Include="knightSlash.h" />
     <ClInclude Include="cAsteroid.h" />
     <ClInclude Include="cBkGround.h" />
