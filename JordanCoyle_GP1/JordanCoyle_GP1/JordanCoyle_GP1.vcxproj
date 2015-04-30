@@ -76,13 +76,11 @@
     <ClCompile Include="cObject.cpp" />
     <ClCompile Include="cSword.cpp" />
     <ClCompile Include="knightSlash.cpp" />
-    <ClCompile Include="cAsteroid.cpp" />
     <ClCompile Include="cBkGround.cpp" />
     <ClCompile Include="cBullet.cpp" />
     <ClCompile Include="cFont.cpp" />
     <ClCompile Include="cFontMgr.cpp" />
     <ClCompile Include="cInputMgr.cpp" />
-    <ClCompile Include="cRocket.cpp" />
     <ClCompile Include="cSound.cpp" />
     <ClCompile Include="cSoundMgr.cpp" />
     <ClCompile Include="cSprite.cpp" />
@@ -95,13 +93,11 @@
     <ClInclude Include="cObject.h" />
     <ClInclude Include="cSword.h" />
     <ClInclude Include="knightSlash.h" />
-    <ClInclude Include="cAsteroid.h" />
     <ClInclude Include="cBkGround.h" />
     <ClInclude Include="cBullet.h" />
     <ClInclude Include="cFont.h" />
     <ClInclude Include="cFontMgr.h" />
     <ClInclude Include="cInputMgr.h" />
-    <ClInclude Include="cRocket.h" />
     <ClInclude Include="cSound.h" />
     <ClInclude Include="cSoundMgr.h" />
     <ClInclude Include="cSprite.h" />

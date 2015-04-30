@@ -2,7 +2,7 @@
 #define _COBJECT_H
 
 #include "cSprite.h"
-#include "knightSlash.h"
+//#include "knightSlash.h"
 
 class cObject : public cSprite
 {
@@ -11,13 +11,13 @@ private:
 
 public:
 	int playerHealth = 3;
-	int score = 0;
 	void render();
 	void update(float deltaTime);
 	void setobjectVelocity(glm::vec2 swordVel);
 	glm::vec2 getObjectVelocity();
 	void renderCollisionBox();
 	bool collidedWith(RECT thisSprite, RECT otherSpritePos);
+	void getHealth();
 };
 
 #endif

@@ -50,23 +50,24 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 
 	inputMng->clearBuffers(inputMng->KEYS_DOWN_BUFFER | inputMng->KEYS_PRESSED_BUFFER);
 
-	LPCSTR gameSounds[1] = { "Audio\\Space_Coast.mp3" };
+
+	LPCSTR gameSounds[1] = { "Audio\\Beethoven_39_s_5_Secrets_-_OneRepublic_Cello-Orche.wav" };
 
 	soundMng->add("MenuMusic", gameSounds[0]);
 
 	LPCSTR objectTextures[] = {"Images\\star.png", "Images\\Ball.png"};
-	for (int tCount = 0; playerHealth < 3; tCount++)
+	for (int tCount = 0; tCount < 2; tCount++)
 	{
 		theGameTextures.push_back(new cTexture());
 		theGameTextures[tCount]->createTexture(objectTextures[tCount]);
 	}
 
-	for (int object = 0; playerHealth < 3; object++)
+	for (int object = 0; object < 1; object++)
 	{
 		theObjects.push_back(new cObject);
-		theObjects[object]->setSpritePos(glm::vec2(1280.0f, 300.0f));
+		theObjects[object]->setSpritePos(glm::vec2(1280.0f, 350.0f));
 		theObjects[object]->setSpriteTranslation(glm::vec2((rand() % 4 + 1), (rand() % 4 + 1)));
-		int randObject = rand() % 4;
+		int randObject = rand() % 2;
 		theObjects[object]->setTexture(theGameTextures[randObject]->getTexture());
 		theObjects[object]->setTextureDimensions(theGameTextures[randObject]->getTWidth(), theGameTextures[randObject]->getTHeight());
 		theObjects[object]->setSpriteCentre();
@@ -97,6 +98,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 	swordSprite.setTextureDimensions(swordTex.getTWidth(), swordTex.getTHeight());
 
 	introSprite.attachSoundMgr(soundMng);
+
 	int game_State = MENU;
 
 	soundMng->getSnd("MenuMusic")->playAudio(AL_LOOPING);
@@ -118,8 +120,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 			introSprite.render();
 			if (inputMng->wasKeyPressed(VK_RETURN))
 			{
-				game_State = PLAYING;
 				soundMng->getSnd("MenuMusic")->stopAudio();
+				game_State = PLAYING;
 			}
 			break;
 		}
@@ -130,9 +132,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 			swordSprite.update(timeSince);
 			swordSprite.render();
 			swordSprite.renderCollisionBox();
-			//objectSprite1.update(timeSince);
-			//objectSprite1.render();
-			//objectSprite1.renderCollisionBox();
+
+			for (int object = 0; object < theObjects.size(); object++)
+			{
+				if (theObjects[object]->isActive())
+				{
+					theObjects[object]->update(timeSince);
+					theObjects[object]->render();
+					theObjects[object]->renderCollisionBox();
+				}
+			}
+
 			// main game code in here
 			// When game finished change game_State to END.
 			break;

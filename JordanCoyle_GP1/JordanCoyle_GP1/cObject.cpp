@@ -74,16 +74,3 @@ void cObject::renderCollisionBox()
 
 	glPopMatrix();
 }
-
-bool cObject::collidedWith(RECT thisSpriteRect, RECT otherSpriteRect)
-{
-	RECT tempRect;
-
-	cObject::getBoundingRect();
-	otherSpriteRect->getBoundingRect();
-
-	if (IntersectRect(&tempRect, &thisSpriteRect, &otherSpriteRect))
-		return true;
-	else
-		return false;
-}

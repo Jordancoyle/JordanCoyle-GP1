@@ -36,6 +36,21 @@ void cSword::update(float deltaTime)
 	}
 
 	setBoundingRect(&boundingRect);
+
+	for (vector<cObject*>::iterator objectIterartor = theObjects.begin(); objectIterartor != theObjects.end(); ++objectIterartor)
+	{
+		(*objectIterartor)->update(deltaTime);
+		//for (vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin(); asteroidIterator != theAsteroids.end(); ++asteroidIterator)
+		//{
+			if (this->collidedWith(this->getBoundingRect(), (*objectIterartor)->getBoundingRect()))
+			{
+				// if a collision set the bullet and asteroid to false
+				//(*asteroidIterator)->setActive(false);
+				(*objectIterartor)->setActive(false);
+				score++;
+			}
+		//}
+	}
 }
 
 void cSword::renderCollisionBox()

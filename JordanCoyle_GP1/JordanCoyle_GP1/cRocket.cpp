@@ -105,7 +105,7 @@ void cRocket::update(float deltaTime)
 	==============================================================
 	| Check for collisions
 	==============================================================
-	*/
+	
 	for (vector<cBullet*>::iterator bulletIterartor = theRocketBullets.begin(); bulletIterartor != theRocketBullets.end(); ++bulletIterartor)
 	{
 		(*bulletIterartor)->update(deltaTime);
@@ -136,6 +136,7 @@ void cRocket::update(float deltaTime)
 			++bulletIterartor;
 		}
 	}
+	*/
 }
 /*
 =================================================================
