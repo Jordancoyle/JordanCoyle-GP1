@@ -9,7 +9,7 @@
 #include "cObject.h"
 
 extern vector<cTexture*> theGameTextures;
-extern vector<cAsteroid*> theAsteroids;
+extern vector<cObject*> theObjects;
 extern vector<cBullet*> theRocketBullets;
 
 #endif

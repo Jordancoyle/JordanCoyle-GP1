@@ -14,6 +14,7 @@ public:
 	void update(float deltaTime);
 	void setswordVelocity(glm::vec2 swordVel);
 	glm::vec2 getSwordVelocity();
+	void renderCollisionBox();
 };
 
 #endif

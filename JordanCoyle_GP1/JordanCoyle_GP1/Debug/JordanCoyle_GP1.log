@@ -1,40 +1,45 @@
-﻿Build started 30/04/2015 01:06:22.
+﻿Build started 30/04/2015 13:27:01.
      1>Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cObject.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cObject.cpp cRocket.cpp main.cpp
+         main.cpp
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(58): error C2065: 'playerHealth' : undeclared identifier
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(64): error C2065: 'playerHealth' : undeclared identifier
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(102): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(102): warning C4309: 'argument' : truncation of constant value
+         cRocket.cpp
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\crocket.cpp(23): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\crocket.cpp(25): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\crocket.cpp(27): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\crocket.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\crocket.cpp(112): error C2065: 'theAsteroids' : undeclared identifier
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\crocket.cpp(112): error C2228: left of '.begin' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\crocket.cpp(112): error C2228: left of '.end' must have class/struct/union
+                 type is 'unknown-type'
          cObject.cpp
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\knightslash.h(12): error C2065: 'cObject' : undeclared identifier
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\knightslash.h(12): error C2059: syntax error : '>'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\knightslash.h(12): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
      1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
      1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(18): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
      1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(20): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
      1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(22): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.lib" /MACHINE:X86 Debug\cObject.obj
-         Debug\cSword.obj
-         Debug\knightSlash.obj
-         Debug\cAsteroid.obj
-         Debug\cBkGround.obj
-         Debug\cBullet.obj
-         Debug\cFont.obj
-         Debug\cFontMgr.obj
-         Debug\cInputMgr.obj
-         Debug\cRocket.obj
-         Debug\cSound.obj
-         Debug\cSoundMgr.obj
-         Debug\cSprite.obj
-         Debug\cTexture.obj
-         Debug\cWNDManager.obj
-         Debug\main.obj
-         Debug\windowOGL.obj
-         alut.lib
-         DevIL.lib
-         freeglut.lib
-         ftgl.lib
-         ILU.lib
-         ILUT.lib
-         OpenAL32.lib
-         JordanCoyle_GP1.vcxproj -> C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.exe
-     1>Done Building Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" (Build target(s)).
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(57): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(68): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(69): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(70): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(71): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(83): error C2660: 'cSprite::getBoundingRect' : function does not take 1 arguments
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(84): error C2819: type 'tagRECT' does not have an overloaded member 'operator ->'
+                 c:\program files (x86)\windows kits\8.1\include\shared\windef.h(155) : see declaration of 'tagRECT'
+                 did you intend to use '.' instead?
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp(84): error C2039: 'getBoundingRect' : is not a member of 'tagRECT'
+                 c:\program files (x86)\windows kits\8.1\include\shared\windef.h(155) : see declaration of 'tagRECT'
+         Generating Code...
+     1>Done Building Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.34
+Time Elapsed 00:00:02.16

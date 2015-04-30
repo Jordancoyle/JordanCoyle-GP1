@@ -15,8 +15,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 	cTexture introTex,
 		backGroundTex,
 		charTex,
-		swordTex,
-		tempObjectTex;
+		swordTex;
 
 	cBkGround backGroundSprite,
 		introSprite,
@@ -55,7 +54,26 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 
 	soundMng->add("MenuMusic", gameSounds[0]);
 
-	//LPCSTR objectTextures[] = {};
+	LPCSTR objectTextures[] = {"Images\\star.png", "Images\\Ball.png"};
+	for (int tCount = 0; playerHealth < 3; tCount++)
+	{
+		theGameTextures.push_back(new cTexture());
+		theGameTextures[tCount]->createTexture(objectTextures[tCount]);
+	}
+
+	for (int object = 0; playerHealth < 3; object++)
+	{
+		theObjects.push_back(new cObject);
+		theObjects[object]->setSpritePos(glm::vec2(1280.0f, 300.0f));
+		theObjects[object]->setSpriteTranslation(glm::vec2((rand() % 4 + 1), (rand() % 4 + 1)));
+		int randObject = rand() % 4;
+		theObjects[object]->setTexture(theGameTextures[randObject]->getTexture());
+		theObjects[object]->setTextureDimensions(theGameTextures[randObject]->getTWidth(), theGameTextures[randObject]->getTHeight());
+		theObjects[object]->setSpriteCentre();
+		theObjects[object]->setobjectVelocity(glm::vec2(glm::vec2(0.0f, 0.0f)));
+		theObjects[object]->setActive(true);
+		theObjects[object]->setMdlRadius();
+	}
 
 	introTex.createTexture("Images\\intro_screen.png");
 	introSprite.setSpritePos(glm::vec2(0.0f, 0.0f));
@@ -77,12 +95,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 	swordSprite.setSpritePos(glm::vec2(200.0f, 290.0f));
 	swordSprite.setTexture(swordTex.getTexture());
 	swordSprite.setTextureDimensions(swordTex.getTWidth(), swordTex.getTHeight());
-
-	tempObjectTex.createTexture("Images\\Ball.png");
-	objectSprite1.attachInputMgr(inputMng);
-	objectSprite1.setSpritePos(glm::vec2(1280.0f, 300.0f));
-	objectSprite1.setTexture(tempObjectTex.getTexture());
-	objectSprite1.setTextureDimensions(tempObjectTex.getTWidth(), tempObjectTex.getTHeight());
 
 	introSprite.attachSoundMgr(soundMng);
 	int game_State = MENU;
@@ -117,8 +129,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 			charSprite.render();
 			swordSprite.update(timeSince);
 			swordSprite.render();
-			objectSprite1.update(timeSince);
-			objectSprite1.render();
+			swordSprite.renderCollisionBox();
+			//objectSprite1.update(timeSince);
+			//objectSprite1.render();
+			//objectSprite1.renderCollisionBox();
 			// main game code in here
 			// When game finished change game_State to END.
 			break;
