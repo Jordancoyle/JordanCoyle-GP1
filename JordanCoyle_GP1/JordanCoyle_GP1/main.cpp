@@ -15,13 +15,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 	cTexture introTex,
 		backGroundTex,
 		charTex,
-		swordTex;
+		swordTex,
+		tempObjectTex;
 
 	cBkGround backGroundSprite,
 		introSprite,
 		charSprite;
 
 	cSword swordSprite;
+
+	cObject objectSprite1;
 
 	windowOGL oglWindow;
 
@@ -52,6 +55,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 
 	soundMng->add("MenuMusic", gameSounds[0]);
 
+	//LPCSTR objectTextures[] = {};
+
 	introTex.createTexture("Images\\intro_screen.png");
 	introSprite.setSpritePos(glm::vec2(0.0f, 0.0f));
 	introSprite.setTexture(introTex.getTexture());
@@ -69,9 +74,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 
 	swordTex.createTexture("Images\\Sword_Sprite.png");
 	swordSprite.attachInputMgr(inputMng);
-	swordSprite.setSpritePos(glm::vec2(220.0f, 220.0f));
+	swordSprite.setSpritePos(glm::vec2(200.0f, 290.0f));
 	swordSprite.setTexture(swordTex.getTexture());
 	swordSprite.setTextureDimensions(swordTex.getTWidth(), swordTex.getTHeight());
+
+	tempObjectTex.createTexture("Images\\Ball.png");
+	objectSprite1.attachInputMgr(inputMng);
+	objectSprite1.setSpritePos(glm::vec2(1280.0f, 300.0f));
+	objectSprite1.setTexture(tempObjectTex.getTexture());
+	objectSprite1.setTextureDimensions(tempObjectTex.getTWidth(), tempObjectTex.getTHeight());
 
 	introSprite.attachSoundMgr(soundMng);
 	int game_State = MENU;
@@ -104,7 +115,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevHInstance, LPSTR cmdLine, 
 		{
 			backGroundSprite.render();
 			charSprite.render();
+			swordSprite.update(timeSince);
 			swordSprite.render();
+			objectSprite1.update(timeSince);
+			objectSprite1.render();
 			// main game code in here
 			// When game finished change game_State to END.
 			break;
