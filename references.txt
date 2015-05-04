@@ -1,0 +1,5 @@
+Sources
+
+-freesound.org for the sounds in the game
+-paint
+-stackoverflow.com
