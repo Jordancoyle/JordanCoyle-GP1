@@ -73,11 +73,11 @@
     <Library Include="OpenAL32.lib" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cKnight.cpp" />
     <ClCompile Include="cObject.cpp" />
     <ClCompile Include="cSword.cpp" />
     <ClCompile Include="knightSlash.cpp" />
     <ClCompile Include="cBkGround.cpp" />
-    <ClCompile Include="cBullet.cpp" />
     <ClCompile Include="cFont.cpp" />
     <ClCompile Include="cFontMgr.cpp" />
     <ClCompile Include="cInputMgr.cpp" />
@@ -90,11 +90,11 @@
     <ClCompile Include="windowOGL.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cKnight.h" />
     <ClInclude Include="cObject.h" />
     <ClInclude Include="cSword.h" />
     <ClInclude Include="knightSlash.h" />
     <ClInclude Include="cBkGround.h" />
-    <ClInclude Include="cBullet.h" />
     <ClInclude Include="cFont.h" />
     <ClInclude Include="cFontMgr.h" />
     <ClInclude Include="cInputMgr.h" />
@@ -106,6 +106,10 @@
     <ClInclude Include="GameConstants.h" />
     <ClInclude Include="wglext.h" />
     <ClInclude Include="windowOGL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

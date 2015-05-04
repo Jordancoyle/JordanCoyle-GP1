@@ -23,6 +23,7 @@ protected:
 	float spriteRotation;
 	glm::mat4x4 spriteTransformMatrix;
 	RECT boundingRect;
+	RECT swordBoundingRect;
 	float m_Radius;
 	bool mActive;
 
@@ -64,8 +65,11 @@ public:
 	virtual void update(float deltaTime) = 0;
 	void setBoundingRect(RECT* pRect);		// Determine the bounding rectangle for the sprite
 	RECT getBoundingRect();		// Determine the bounding rectangle for the sprite
+	void setSwordBoundingRect(RECT* pRect);
+	RECT getSwordBoundingRect();
 	bool collidedWith(RECT thisSprite, RECT otherSpritePos);	// Check for collisions
 	bool SphereSphereCollision(glm::vec2 spritePosition, float spriteRadius);
 	virtual void renderCollisionBox();				// Use this function to show the collision box
+	virtual void renderSwordCollisionBox();
 };
 #endif

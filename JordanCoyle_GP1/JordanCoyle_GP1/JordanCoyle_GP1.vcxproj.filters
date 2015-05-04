@@ -27,9 +27,6 @@
     <ClCompile Include="cBkGround.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cBullet.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="cFont.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -69,12 +66,12 @@
     <ClCompile Include="cObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cKnight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cBkGround.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cBullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cFont.h">
@@ -119,5 +116,12 @@
     <ClInclude Include="cObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cKnight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

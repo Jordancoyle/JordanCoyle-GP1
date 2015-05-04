@@ -23,7 +23,7 @@ public:
 	cFont(LPCSTR fontFileName, int fontSize);
 	~cFont();
 	FTFont* getFont();
-	void printText(LPCSTR text, FTPoint textPos);
+	void printText(LPCSTR text, glm::vec2 textPos);
 
 };
 #endif

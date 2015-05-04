@@ -37,7 +37,7 @@ void cObject::update(float deltaTime)
 
 	objectVelocity *= 1.0f;
 
-	setBoundingRect(&boundingRect);
+    setBoundingRect(&boundingRect);
 }
 
 void cObject::setobjectVelocity(glm::vec2 (objectVel))

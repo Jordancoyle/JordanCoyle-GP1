@@ -7,6 +7,7 @@
 #include "cBkGround.h"
 #include "cSword.h"
 #include "cObject.h"
+#include "cKnight.h"
 
 extern vector<cTexture*> theGameTextures;
 extern vector<cBullet*> theRocketBullets;

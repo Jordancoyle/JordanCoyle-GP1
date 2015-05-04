@@ -62,12 +62,14 @@ FTFont* cFont::getFont()
 Render the text using the desired font
 ==========================================================================
 */
-void cFont::printText(LPCSTR text, FTPoint textPos)
+void cFont::printText(LPCSTR text, glm::vec2 textPos)
 {
 	glPushMatrix();
 
-	glColor3f(0.0f, 255.0f, 0.0f);
-	theFont->Render(text,  -1, textPos);
+	glTranslatef(textPos.x, textPos.y, 0);
+	glScalef(1.0f, -1.0, 1.0);
+	glColor3f(255.0f, 179.0f, 0.0f);
+	theFont->Render(text, -1.0f, FTPoint(0.0f, -1.0f, 0.0f));
 
 	glPopMatrix();
 }

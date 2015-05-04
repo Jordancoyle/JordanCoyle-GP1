@@ -2,6 +2,8 @@
 
 void cSword::render()
 {
+	bool sound = false;
+
 	glPushMatrix();
 
 	glTranslatef(spritePos2D.x, spritePos2D.y, 0.0f);
@@ -35,19 +37,20 @@ void cSword::update(float deltaTime)
 		//glTranslatef(spritePos2D.x, spritePos2D.y, 0.0f);
 	}
 
-	setBoundingRect(&boundingRect);
+	setSwordBoundingRect(&swordBoundingRect);
 
 	for (vector<cObject*>::iterator objectIterartor = theObjects.begin(); objectIterartor != theObjects.end(); ++objectIterartor)
 	{
 		(*objectIterartor)->update(deltaTime);
 		//for (vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin(); asteroidIterator != theAsteroids.end(); ++asteroidIterator)
 		//{
-			if (this->collidedWith(this->getBoundingRect(), (*objectIterartor)->getBoundingRect()))
+			if (this->collidedWith(this->getSwordBoundingRect(), (*objectIterartor)->getBoundingRect()))
 			{
 				// if a collision set the bullet and asteroid to false
 				//(*asteroidIterator)->setActive(false);
 				(*objectIterartor)->setActive(false);
 				score++;
+				sound = true;
 			}
 		//}
 	}
@@ -76,4 +79,48 @@ void cSword::renderCollisionBox()
 	glEnd();
 
 	glPopMatrix();
+}
+
+void cSword::renderSwordCollisionBox()
+{
+	glPushMatrix();
+
+	glTranslatef(swordBoundingRect.left, swordBoundingRect.top, 0.0f);
+	glRotatef(spriteRotation, 0.0f, 0.0f, 1.0f);
+	glScalef(spriteScaling.x, spriteScaling.y, 1.0f);
+
+	glColor3f(255.0f, 0.0f, 0.0f);
+	glBegin(GL_LINE_LOOP);
+	//glVertex2f(-(textureWidth / 2), -(textureHeight / 2));
+	//glVertex2f((textureWidth / 2), -(textureHeight / 2));
+	//glVertex2f((textureWidth / 2), (textureHeight / 2));
+	//glVertex2f(-(textureWidth / 2), (textureHeight / 2));
+
+	glVertex2f(-((swordBoundingRect.right - swordBoundingRect.left) / 2), -((swordBoundingRect.bottom - swordBoundingRect.top) / 2));
+	glVertex2f(((swordBoundingRect.right - swordBoundingRect.left) / 2), -((swordBoundingRect.bottom - swordBoundingRect.top) / 2));
+	glVertex2f(((swordBoundingRect.right - swordBoundingRect.left) / 2), ((swordBoundingRect.bottom - swordBoundingRect.top) / 2));
+	glVertex2f(-((swordBoundingRect.right - swordBoundingRect.left) / 2), ((swordBoundingRect.bottom - swordBoundingRect.top) / 2));
+
+	glEnd();
+
+	glPopMatrix();
+}
+
+void cSword::setScore(int sc)
+{
+	score = sc;
+}
+int cSword::getScore()
+{
+	return score;
+}
+
+void cSword::setSound(bool snd)
+{
+	sound = snd;
+}
+
+bool cSword::getSound()
+{
+	return sound;
 }

@@ -245,6 +245,19 @@ void cSprite::setBoundingRect(RECT* pRect)
 
 	SetRect(pRect, (int)theBoundingRect.left, (int)theBoundingRect.top, (int)theBoundingRect.right, (int)theBoundingRect.bottom);
 }
+
+void cSprite::setSwordBoundingRect(RECT* pRect)
+{
+	glm::vec2 sPos = getSpritePos();
+	sPos.y -= 75;
+	RECT theBoundingRect;
+	theBoundingRect.left = sPos.x;
+	theBoundingRect.top = sPos.y;
+	theBoundingRect.right = textureWidth + sPos.x;
+	theBoundingRect.bottom = textureHeight + sPos.y;
+
+	SetRect(pRect, (int)theBoundingRect.left, (int)theBoundingRect.top, (int)theBoundingRect.right, (int)theBoundingRect.bottom);
+}
 /*
 =================
 - Return the bounding rectangle for the sprite.
@@ -253,6 +266,11 @@ void cSprite::setBoundingRect(RECT* pRect)
 RECT cSprite::getBoundingRect()		// Return the bounding rectangle for the sprite
 {
 	return cSprite::boundingRect;
+}
+
+RECT cSprite::getSwordBoundingRect()
+{
+	return cSprite::swordBoundingRect;
 }
 /*
 =================
@@ -302,6 +320,32 @@ void cSprite::renderCollisionBox()
 	glRotatef(spriteRotation, 0.0f, 0.0f, 1.0f);
 	glScalef(spriteScaling.x, spriteScaling.y, 1.0f);
 	
+	glColor3f(255.0f, 0.0f, 0.0f);
+	//glBegin(GL_LINE_LOOP);
+	//glVertex2f(0, 0);
+	//glVertex2f(0, boundingRect.bottom);
+	//glVertex2f(boundingRect.right, boundingRect.bottom);
+	//glVertex2f(boundingRect.right, 0);
+	glBegin(GL_QUADS);
+	glVertex2f(0, 0);
+	glVertex2f(textureWidth, 0);
+	glVertex2f(textureWidth, textureHeight);
+	glVertex2f(0, textureHeight);
+
+
+	glEnd();
+
+	glPopMatrix();
+}
+
+void cSprite::renderSwordCollisionBox()
+{
+	glPushMatrix();
+
+	glTranslatef(swordBoundingRect.left, swordBoundingRect.top, 0.0f);
+	glRotatef(spriteRotation, 0.0f, 0.0f, 1.0f);
+	glScalef(spriteScaling.x, spriteScaling.y, 1.0f);
+
 	glColor3f(255.0f, 0.0f, 0.0f);
 	//glBegin(GL_LINE_LOOP);
 	//glVertex2f(0, 0);

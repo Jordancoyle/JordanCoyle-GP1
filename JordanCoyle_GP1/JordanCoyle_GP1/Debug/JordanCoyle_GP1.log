@@ -1,42 +1,45 @@
-﻿Build started 30/04/2015 23:40:29.
-     1>Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" on node 2 (Rebuild target(s)).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb' because it is being used by another process.
+﻿Build started 04/05/2015 02:32:21.
+     1>Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cObject.cpp cSword.cpp knightSlash.cpp cBkGround.cpp cBullet.cpp cFont.cpp cFontMgr.cpp cInputMgr.cpp cSound.cpp cSoundMgr.cpp cSprite.cpp cTexture.cpp cWNDManager.cpp main.cpp windowOGL.cpp
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-         cObject.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cobject.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cSword.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\csword.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         knightSlash.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\knightslash.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cBkGround.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cbkground.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cBullet.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cbullet.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cFont.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cfont.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cFontMgr.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cfontmgr.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cInputMgr.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cinputmgr.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cSound.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\csound.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cSoundMgr.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\csoundmgr.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cSprite.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\csprite.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cTexture.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\ctexture.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         cWNDManager.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\cwndmanager.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         windowOGL.cpp
-     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\windowogl.cpp : fatal error C1041: cannot open program database 'c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         Generating Code...
-     1>Done Building Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" (Rebuild target(s)) -- FAILED.
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(137): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(137): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(159): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(159): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(199): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(211): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(211): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(219): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(219): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(227): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\jordancoyle-gp1\jordancoyle_gp1\jordancoyle_gp1\main.cpp(227): warning C4309: 'argument' : truncation of constant value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.lib" /MACHINE:X86 Debug\cKnight.obj
+         Debug\cObject.obj
+         Debug\cSword.obj
+         Debug\knightSlash.obj
+         Debug\cBkGround.obj
+         Debug\cFont.obj
+         Debug\cFontMgr.obj
+         Debug\cInputMgr.obj
+         Debug\cSound.obj
+         Debug\cSoundMgr.obj
+         Debug\cSprite.obj
+         Debug\cTexture.obj
+         Debug\cWNDManager.obj
+         Debug\main.obj
+         Debug\windowOGL.obj
+         alut.lib
+         DevIL.lib
+         freeglut.lib
+         ftgl.lib
+         ILU.lib
+         ILUT.lib
+         OpenAL32.lib
+         JordanCoyle_GP1.vcxproj -> C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\Debug\JordanCoyle_GP1.exe
+     1>Done Building Project "C:\Users\Jordan Coyle\Documents\JordanCoyle-GP1\JordanCoyle_GP1\JordanCoyle_GP1\JordanCoyle_GP1.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.29
+Time Elapsed 00:00:05.02
